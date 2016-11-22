@@ -2,6 +2,7 @@ package test.data;
 
 import org.testng.annotations.DataProvider;
 import utils.XmlReader;
+import utils.db.DbReader;
 
 public class EmailTestDataProvider {
     @DataProvider(name = "simpleDataProvider")
@@ -15,5 +16,10 @@ public class EmailTestDataProvider {
     public static Object[][] getXmlData() {
         String filePath = "./src/test/resources/EmailTestData.xml";
         return new XmlReader().readXml(filePath);
+    }
+
+    @DataProvider(name = "dbDataProvider")
+    public static Object[][] getDblData() {
+        return new DbReader().readDbData("java_test");
     }
 }

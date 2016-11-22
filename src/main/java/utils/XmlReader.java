@@ -23,7 +23,7 @@ public class XmlReader {
             int dataSize = list.size();
             int argumentsSize = ((Element) list.get(0)).getChildren().size();
             Object[][] elements = new Object[dataSize][argumentsSize];
-            log.debug("DataProvider = [{}][{}]", dataSize, argumentsSize);
+            log.debug("XML DataProvider returned [{}][{}]", dataSize, argumentsSize);
             for (int i = 0; i < dataSize; i++) {
                 Element node = (Element) list.get(i);
                 for (int j = 0; j < argumentsSize; j++) {
