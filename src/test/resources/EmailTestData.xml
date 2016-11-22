@@ -1,0 +1,18 @@
+<TestData>
+    <element>
+        <sender>daria-test2@tut.by</sender>
+        <senderPassword>11111111</senderPassword>
+        <subj>XML test Subj</subj>
+        <msgBody>XML test Body</msgBody>
+        <recipient>daria-test3@yandex.ru</recipient>
+        <recipientPassword>123123qa</recipientPassword>
+    </element>
+    <element>
+        <sender>daria-test3@yandex.ru</sender>
+        <senderPassword>123123qa</senderPassword>
+        <subj>XML2 test2 Subj2</subj>
+        <msgBody>XML2 test2 Body2</msgBody>
+        <recipient>daria-test2@tut.by</recipient>
+        <recipientPassword>11111111</recipientPassword>
+    </element>
+</TestData>

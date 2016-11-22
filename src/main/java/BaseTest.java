@@ -2,9 +2,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,22 +15,16 @@ public class BaseTest {
         return driver;
     }
 
-    @BeforeSuite
+    @BeforeMethod
     public void prepareDriver() {
         log.info("Init driver.");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-    @AfterSuite
+    @AfterMethod
     public void afterSuite() {
         log.info("Shut down driver.");
         driver.quit();
-    }
-
-    @AfterTest
-    public void clearCookies() {
-        log.info("Delete cookies.");
-        driver.manage().deleteAllCookies();
     }
 }
