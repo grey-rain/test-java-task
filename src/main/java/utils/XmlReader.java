@@ -32,10 +32,8 @@ public class XmlReader {
             }
             return elements;
         } catch (IOException io) {
-            System.out.println(io.getMessage());
             log.error("File not found. {}", io.getLocalizedMessage());
         } catch (JDOMException jdomex) {
-            System.out.println(jdomex.getMessage());
             log.error("JDom exception. {}", jdomex.getLocalizedMessage());
         }
         log.warn("Empty dataProvider will be set.");

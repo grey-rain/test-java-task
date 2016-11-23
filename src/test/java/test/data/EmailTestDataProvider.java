@@ -1,6 +1,7 @@
 package test.data;
 
 import org.testng.annotations.DataProvider;
+import utils.CsvReader;
 import utils.XmlReader;
 import utils.db.DbReader;
 
@@ -21,5 +22,10 @@ public class EmailTestDataProvider {
     @DataProvider(name = "dbDataProvider")
     public static Object[][] getDblData() {
         return new DbReader().readDbData("java_test");
+    }
+
+    @DataProvider(name = "csvDataProvider")
+    public static Object[][] getCsvData() {
+        return new CsvReader().readCsv("./src/test/resources/EmailTestData.csv");
     }
 }

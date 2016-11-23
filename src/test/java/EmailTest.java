@@ -27,7 +27,7 @@ public class EmailTest extends BaseTest {
         mailboxPage = new MailboxPage(getDriver());
     }
 
-    @Test(dataProvider = "dbDataProvider", dataProviderClass = EmailTestDataProvider.class)
+    @Test(dataProvider = "csvDataProvider", dataProviderClass = EmailTestDataProvider.class)
     public void testEmail(String sender, String senderPassword, String subj, String msgBody, String recipient,
             String recipientPassword) {
         this.sender = sender;
